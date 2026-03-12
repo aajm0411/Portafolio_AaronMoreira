@@ -57,7 +57,7 @@ public class ProductoController {
             RedirectAttributes redirectAttributes) {
         // Recuperar la categoría seleccionada
         if (producto.getCategoria() != null && producto.getCategoria().getIdCategoria() != null) {
-            var categoriaOpt = categoriaService.getCategoria(producto.getCategoria().getIdCategoria());
+             var categoriaOpt = categoriaService.getCategoria(producto.getCategoria().getIdCategoria());
             categoriaOpt.ifPresent(producto::setCategoria);
         }
 
